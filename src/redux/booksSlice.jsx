@@ -4,12 +4,13 @@ import axios from 'axios'
 
 export const fetchData = createAsyncThunk(
     'books/fetchData',
-    async (bookname) => {
-        const res = await axios('https://www.googleapis.com/books/v1/volumes?q=${bookname}+inauthor`')
-        const data = await res.data
-        return data.items
+    async (query) => {
+      const res = await axios(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+      const data = res.data;
+      return data.items;
     }
-)
+  );
+
 
 
 export const booksSlice = createSlice({
