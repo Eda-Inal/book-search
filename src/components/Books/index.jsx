@@ -5,7 +5,7 @@ import book from "../../assets/book.jpg"
 
 function Book() {
   return (
-    <div className="container text-center mx-auto mt-5">
+    <div className="container text-center mx-auto mt-5 mb-4">
       <div className="row mx-auto">
     <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
       <div className="card" >
