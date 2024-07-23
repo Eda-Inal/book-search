@@ -1,9 +1,12 @@
 import React from 'react'
 import "./index.scss"
 import book from "../../assets/book.jpg"
+import { useSelector } from 'react-redux'
+
 
 
 function Book() {
+ 
   return (
     <div className="container text-center mx-auto mt-5 mb-4">
       <div className="row mx-auto">
@@ -43,7 +46,7 @@ Details
 </div>
 </div>
   </div>
-  
+ 
   </div>
   )
 }
