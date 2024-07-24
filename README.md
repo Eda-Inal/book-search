@@ -1,6 +1,7 @@
 ## BOOK SEARCH APP
 ***
 ## About project
+#### Data sourced from Google Books API
 ### -React.js
 ### -Redux Toolkit
 ### -AsyncThunk
