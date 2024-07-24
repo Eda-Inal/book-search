@@ -2,13 +2,18 @@
   .card {
     max-width: 300px;
     margin: 10px auto;
+    height: 400px;
   }
   .card img {
     max-width: 50%;
-    max-height: 200px;
+    height: 150px;
     padding: 2px;
     margin: 0 auto;
     margin-top: 2;
+  }
+  .card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   
@@ -25,4 +30,13 @@
   
     }
   }
-  
+ .details{
+
+margin-top: 16px;
+align-self: flex-end;
+ }
+
+
+
+
+

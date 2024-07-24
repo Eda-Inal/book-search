@@ -6,21 +6,22 @@ function Book() {
   const contents = useSelector((state) => state.books.contents);
 
   return (
+
     <div className="container text-center mx-auto mt-5 mb-4">
       <div className="row mx-auto">
         {contents.map((book, index) => (
-          <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
-            <div className="card">
+          <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div className="card" style={{height:300}}>
               <img src={book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150'} alt={book.volumeInfo.title} />
-              <div className="card-body">
-                <h4 className="card-title">{book.volumeInfo.title}</h4>
-             
+              <div className="card-body d-flex flex-column">
+                <h6 className="card-title">{book.volumeInfo.title}</h6>
+
                 <button
                   type="button"
-                  className="btn btn-secondary"
+                  className="btn btn-secondary details mt-auto mx-auto"
                   data-bs-toggle="modal"
                   data-bs-target={`#modal${index}`}
-                  style={{ fontSize: 18 }}
+                  style={{ fontSize: 16 }}
                 >
                   Details
                 </button>
