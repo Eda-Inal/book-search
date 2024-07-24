@@ -10,7 +10,7 @@ function Book() {
     <div className="container text-center mx-auto mt-5 mb-4">
       <div className="row mx-auto">
         {contents.map((book, index) => (
-          <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
             <div className="card" style={{height:300}}>
               <img src={book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150'} alt={book.volumeInfo.title} />
               <div className="card-body d-flex flex-column">
@@ -18,10 +18,11 @@ function Book() {
 
                 <button
                   type="button"
-                  className="btn btn-secondary details mt-auto mx-auto"
+                  className="btn btn-warning details mt-auto mx-auto text-white"
                   data-bs-toggle="modal"
                   data-bs-target={`#modal${index}`}
                   style={{ fontSize: 16 }}
+                 
                 >
                   Details
                 </button>

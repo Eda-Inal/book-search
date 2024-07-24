@@ -20,11 +20,14 @@ export const booksSlice = createSlice({
        contents: [],
   isLoading: false,
   error: null,
+  toast:false
     },
     reducers:{
 searchInput:(state,action)  => {
 state.bookname = action.payload
-}
+},setToast:(state,action) =>{
+  state.toast= action.payload
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchData.pending, (state) => {
@@ -39,8 +42,9 @@ state.bookname = action.payload
           state.error = action.error.message;
         });
       },
+      
   
 
 })
- export const {searchInput} = booksSlice.actions
+ export const {searchInput,setToast} = booksSlice.actions
 export default booksSlice.reducer;
